@@ -1,5 +1,6 @@
 secretWord = "Indonesia"
-guessedLetter = []
+# guessedLetter = []
+guessedLetter = set()
 chances = 6
 
 while chances <= 6:
@@ -12,7 +13,7 @@ while chances <= 6:
   elif guess.lower() in guessedLetter:
     print("u guessed that already")
   else:
-    guessedLetter.append(guess.lower())
+    guessedLetter.add(guess.lower())
     if guess.lower() in secretWord.lower():
       print("congrats you guessed a letter")
     else:
